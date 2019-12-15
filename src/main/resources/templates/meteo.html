@@ -1,0 +1,32 @@
+<! DOCTYPE HTML >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Meteo</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+	<div th:replace="fragments/navbar :: header"></div>
+	<h1>Météo</h1>
+	<p class="lead"
+		th:text="'This is the address that you have typed: ' + ${adresse} " />
+	<ul class="list-group" th:each="adresse: ${adresse}">
+		<li class="list-group-item" th:text="'Adresse : '+${adresse}" />
+
+	</ul>
+	<ul class="list-group" th:each="ville: ${ville}">
+		<li class="list-group-item" th:text="'Ville : '+${ville}" />
+
+	</ul>
+	<ul class="list-group" th:each="meteo: ${meteo}">
+		<li class="list-group-item"
+			th:text="'Summary: '+${meteo.currently.summary}" />
+		<li class="list-group-item"
+			th:text="'Temperature : '+  ${meteo.currently.temperature}" />
+	</ul>
+
+</body>
+</html>

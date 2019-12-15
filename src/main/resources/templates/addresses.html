@@ -1,0 +1,19 @@
+<! DOCTYPE HTML >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Adresses</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div th:replace="fragments/navbar :: header"></div>
+	<h1>Les differentes adresses</h1>
+	<ul class="list-group" th:each="address:${allAdresses}">
+		<li class="list-group-item" th:text="${address.content}" />
+		<li class="list-group-item" th:text="'Auteur: ' + ${address.auteur}" />
+	</ul>
+	
+</body>
+</html>
