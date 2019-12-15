@@ -64,4 +64,4 @@ ou bien on copie ce fichier et on le met sous /ressources/static/css et on l'app
 * pour afficher la prévision du météo: ${meteo.currently.summary}
 
 étape 7 (partie 2): 
-* https://github.com/GhadaRV/Tp5_DM
+* https://github.com/GhadaRV/Tp5POODM
